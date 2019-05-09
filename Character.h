@@ -31,9 +31,7 @@ public:
     
     bool isDescending;
     
-    bool isOnPlatform; 
-    
-    
+    bool isOnPlatform;
     
 };
 

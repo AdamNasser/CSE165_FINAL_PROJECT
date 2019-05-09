@@ -20,7 +20,9 @@ protected:
     GLuint texture_id;
     
 public:
+    bool isFlipped; 
     TexRect(const char*, float, float, float, float);
+    TexRect(); 
     
     void draw(float z) const;
 };

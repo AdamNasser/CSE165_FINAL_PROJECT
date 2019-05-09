@@ -9,17 +9,18 @@
 #include <iostream>
 #include "Character.h"
 using namespace std;
-Character::Character(int orientation, bool characterisMoving, const char * map_filename, bool isJumping, bool isDescending): AnimatedRect(map_filename, 4, 2,100,true,false,0.1,-0.2,1,0.5){
+Character::Character(int orientation, bool characterisMoving, const char * map_filename, bool isJumping, bool isDescending): AnimatedRect(map_filename, 4, 2,100,true,false,-1.5,-0.2,1,0.5){
     cout<<"New Character created"<<endl;
     this->orientation = orientation;
     this->characterisMoving = characterisMoving;
     this->isJumping = isJumping;
     this->isDescending = isDescending;
     this->isOnPlatform = false;
-    this->ceiling = 0.45; 
+    this->ceiling = 0.45;
 }
 int Character::handleKeyInput(int key, int selectedKey, string type) {
-    cout<<"Character is handling key input...."<<type<<endl;
+   // cout<<key<<endl; 
+   // cout<<"Character is handling key input...."<<type<<endl;
     if (type == "up") {
         if(key == 102 ) { // right arrow key
             if(this->orientation == 0) {
@@ -61,9 +62,9 @@ int Character::handleKeyInput(int key, int selectedKey, string type) {
             this->playLoop();
             return 100;
         } else if(key == 101) {// up arrow key
-            std::cout<<"Jumping !!"<<std::endl;
+            //std::cout<<"Jumping !!"<<std::endl;
             if (this->isDescending) {
-                cout<<"is descending, cant jump"<<endl; 
+                //cout<<"is descending, cant jump"<<endl; 
                 return selectedKey;
             }else {
                 this->isJumping = true;
@@ -83,7 +84,7 @@ void Character::handleMovement() {
     
     //player has jumped and should fall back down
     if(this->getY() > this->ceiling && !isOnPlatform) {
-        std::cout<<"Reached max jump height"<<std::endl;
+       // std::cout<<"Reached max jump height"<<std::endl;
         this->isJumping = false;
         this->isDescending = true;
     }
@@ -91,7 +92,7 @@ void Character::handleMovement() {
     if(this->isDescending && this->getY() > -0.20) {
         this->setY(this->getY() - 0.1);
     } else if(this->getY() < -0.15 && this->getY() > -0.30 && this->isDescending ) {
-        cout<<"end of descent";
+       // cout<<"end of descent";
         this->setY(-0.20);
         this->isDescending = false;
     }

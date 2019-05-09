@@ -10,8 +10,8 @@
 #include "Background.h"
 #include "TexRect.h"
 Background::Background() {
-    this->t1 = new TexRect("bg.png",-2.0,1,4,2);
-    this->t2 = new TexRect("bg.png",2.0,1,4,2);
+    this->t1 = new TexRect("mariobackground.png",-2.0,1,4,2);
+    this->t2 = new TexRect("mariobackground.png",2.0,1,4,2);
     this->backgroundCounter = 0; 
 }
 

@@ -5,6 +5,7 @@
 
 AnimatedRect::AnimatedRect (const char* map_filename, int rows, int cols, int rate, bool visible=false, bool animated=false, float x=0, float y=0, float w=0.5, float h=0.5): TexRect(map_filename, x, y, w, h){
     
+    this->filename = map_filename;
     
     glClearColor (0.0, 0.0, 0.0, 0.0);
     glShadeModel(GL_FLAT);
@@ -40,6 +41,10 @@ AnimatedRect::AnimatedRect (const char* map_filename, int rows, int cols, int ra
     this->visible = visible;
     setRate(rate);
     start();
+}
+
+AnimatedRect::AnimatedRect(const AnimatedRect &arect): TexRect(arect.filename, 0, 0, 0.5, 0.5) {
+    
 }
 
 bool AnimatedRect::done() {

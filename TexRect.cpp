@@ -23,28 +23,55 @@ TexRect::TexRect(const char* filename, float x=0, float y=0, float w=0.5, float 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+    
+    isFlipped = false;
+}
+
+TexRect::TexRect() {
+    
+    
 }
 
 
 void TexRect::draw(float z) const {
     glBindTexture( GL_TEXTURE_2D, texture_id );
     glEnable(GL_TEXTURE_2D);
-    
-    glBegin(GL_QUADS);
-    glColor4f(1, 1, 1, 1);
-    glTexCoord2f(0, 0);
-    glVertex3f(x, y - h, z);
-    
-    glTexCoord2f(0, 1);
-    glVertex3f(x, y, z);
-    
-    glTexCoord2f(1, 1);
-    glVertex3f(x+w, y, z);
-    
-    glTexCoord2f(1, 0);
-    glVertex3f(x+w, y - h, z);
-    
-    glEnd();
+    if(!isFlipped) {
+        glBegin(GL_QUADS);
+        
+        glColor4f(1, 1, 1, 1);
+        glTexCoord2f(0, 0);
+        glVertex3f(x, y - h, z);
+        
+        glTexCoord2f(0, 1);
+        glVertex3f(x, y, z);
+        
+        glTexCoord2f(1, 1);
+        glVertex3f(x+w, y, z);
+        
+        glTexCoord2f(1, 0);
+        glVertex3f(x+w, y - h, z);
+        
+        glEnd();
+    } else {
+        glBegin(GL_QUADS);
+        
+        glColor4f(1, 1, 1, 1);
+        glTexCoord2f(1, 0);
+        glVertex3f(x, y - h, z);
+        
+        glTexCoord2f(1, 1);
+        glVertex3f(x, y, z);
+        
+        glTexCoord2f(0, 1);
+        glVertex3f(x+w, y, z);
+        
+        glTexCoord2f(0, 0);
+        glVertex3f(x+w, y - h, z);
+        
+        glEnd();
+    }
+   
     
     glDisable(GL_TEXTURE_2D);
 }

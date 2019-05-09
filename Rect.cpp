@@ -79,7 +79,10 @@ void Rect::draw() const {
 
 
 void Rect::redrawScene(){
-    glutPostRedisplay();
+    
+    
+    //commented out bc was causing error when coins were added
+   // glutPostRedisplay();
 }
 
 Rect::~Rect(){

@@ -23,5 +23,4 @@ public:
     TexRect* t2;
     int backgroundCounter; 
 };
-
 #endif /* Background_h */

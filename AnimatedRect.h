@@ -3,6 +3,8 @@
 
 #include "TexRect.h"
 #include "Timer.h"
+#include <string>
+using namespace std; 
 
 class AnimatedRect: public TexRect, protected Timer {
     
@@ -24,10 +26,14 @@ class AnimatedRect: public TexRect, protected Timer {
     
     bool flipped;
     
+     const char* filename; 
+    
+    
 public:
     
     
     AnimatedRect (const char*, int, int, int, bool, bool, float, float, float, float);
+    AnimatedRect(const AnimatedRect &arect); 
     
     void draw(float z);
     
@@ -46,6 +52,7 @@ public:
     void play();
     
     void flip();
+ 
     
 };
 

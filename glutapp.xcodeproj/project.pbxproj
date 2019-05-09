@@ -23,9 +23,18 @@
 		8402846F225D42CC000F17FA /* cat.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 8402846C225D42CC000F17FA /* cat.png */; };
 		84028471225D5780000F17FA /* imageedit_2_5982155598.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 84028470225D5780000F17FA /* imageedit_2_5982155598.png */; };
 		84421FDE226D871500D9E85C /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84421FDD226D871500D9E85C /* Character.cpp */; };
+		844E95FB2272987A00A810E8 /* myCoin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844E95FA2272987A00A810E8 /* myCoin.cpp */; };
+		844E95FD22729D6400A810E8 /* coin.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 844E95FC22729D6400A810E8 /* coin.png */; };
 		846116DA226A2AEB000BC8B0 /* mushroom.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 846116D9226A2AEA000BC8B0 /* mushroom.png */; };
 		848B83F6226E873300FE22AE /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848B83F5226E873300FE22AE /* Background.cpp */; };
 		848B83F9226ECD5000FE22AE /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848B83F8226ECD5000FE22AE /* Platform.cpp */; };
+		84D118902272AFD900CD9B14 /* mariohat.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 84D1188F2272AFD900CD9B14 /* mariohat.png */; };
+		84E81B39228132C200579F68 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84E81B38228132C200579F68 /* Projectile.cpp */; };
+		84E81B3B22813CE100579F68 /* projectile.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 84E81B3A22813CE100579F68 /* projectile.png */; };
+		84E81B3D22813DB700579F68 /* projectilefire.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 84E81B3C22813DB700579F68 /* projectilefire.png */; };
+		84E81B3F2281419A00579F68 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84E81B3E2281419A00579F68 /* Enemy.cpp */; };
+		84E81B422281477000579F68 /* mariobackground.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 84E81B412281477000579F68 /* mariobackground.png */; };
+		84E81B442281497700579F68 /* goomba.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 84E81B432281497700579F68 /* goomba.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +53,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				84E81B442281497700579F68 /* goomba.png in Copy Files (3 items) */,
+				84E81B422281477000579F68 /* mariobackground.png in Copy Files (3 items) */,
+				84E81B3D22813DB700579F68 /* projectilefire.png in Copy Files (3 items) */,
+				84E81B3B22813CE100579F68 /* projectile.png in Copy Files (3 items) */,
+				84D118902272AFD900CD9B14 /* mariohat.png in Copy Files (3 items) */,
+				844E95FD22729D6400A810E8 /* coin.png in Copy Files (3 items) */,
 				846116DA226A2AEB000BC8B0 /* mushroom.png in Copy Files (3 items) */,
 				84028471225D5780000F17FA /* imageedit_2_5982155598.png in Copy Files (3 items) */,
 				8402846D225D42CC000F17FA /* SOIL.h in Copy Files (3 items) */,
@@ -81,10 +96,22 @@
 		84421FDC226D83CC00D9E85C /* Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		84421FDD226D871500D9E85C /* Character.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
 		84421FDF226E7BD800D9E85C /* Background.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		844E95F92272986800A810E8 /* myCoin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCoin.h; sourceTree = "<group>"; };
+		844E95FA2272987A00A810E8 /* myCoin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = myCoin.cpp; sourceTree = "<group>"; };
+		844E95FC22729D6400A810E8 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 		846116D9226A2AEA000BC8B0 /* mushroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mushroom.png; sourceTree = "<group>"; };
 		848B83F5226E873300FE22AE /* Background.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
 		848B83F7226ECBB900FE22AE /* Platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
 		848B83F8226ECD5000FE22AE /* Platform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Platform.cpp; sourceTree = "<group>"; };
+		84D1188F2272AFD900CD9B14 /* mariohat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariohat.png; sourceTree = "<group>"; };
+		84E81B372281310B00579F68 /* Projectile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Projectile.h; sourceTree = "<group>"; };
+		84E81B38228132C200579F68 /* Projectile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Projectile.cpp; sourceTree = "<group>"; };
+		84E81B3A22813CE100579F68 /* projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile.png; sourceTree = "<group>"; };
+		84E81B3C22813DB700579F68 /* projectilefire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectilefire.png; sourceTree = "<group>"; };
+		84E81B3E2281419A00579F68 /* Enemy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		84E81B40228141A800579F68 /* Enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		84E81B412281477000579F68 /* mariobackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariobackground.png; sourceTree = "<group>"; };
+		84E81B432281497700579F68 /* goomba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goomba.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +132,11 @@
 		173FEEF81AA63A07006CCB85 = {
 			isa = PBXGroup;
 			children = (
+				84E81B432281497700579F68 /* goomba.png */,
+				84E81B412281477000579F68 /* mariobackground.png */,
+				84E81B3C22813DB700579F68 /* projectilefire.png */,
+				84E81B3A22813CE100579F68 /* projectile.png */,
+				84D1188F2272AFD900CD9B14 /* mariohat.png */,
 				846116D9226A2AEA000BC8B0 /* mushroom.png */,
 				84028470225D5780000F17FA /* imageedit_2_5982155598.png */,
 				8402846B225D42CC000F17FA /* bg.png */,
@@ -113,14 +145,17 @@
 				173FEF171AA63B22006CCB85 /* GLUT.framework */,
 				173FEF151AA63B1B006CCB85 /* OpenGL.framework */,
 				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
+				17609DB7219BF07300F85383 /* App.h */,
+				844E95FC22729D6400A810E8 /* coin.png */,
+				17609DB6219BF07300F85383 /* App.cpp */,
 				84421FDC226D83CC00D9E85C /* Character.h */,
+				844E95F92272986800A810E8 /* myCoin.h */,
+				844E95FA2272987A00A810E8 /* myCoin.cpp */,
 				84421FDD226D871500D9E85C /* Character.cpp */,
 				84421FDF226E7BD800D9E85C /* Background.h */,
+				848B83F5226E873300FE22AE /* Background.cpp */,
 				848B83F7226ECBB900FE22AE /* Platform.h */,
 				848B83F8226ECD5000FE22AE /* Platform.cpp */,
-				848B83F5226E873300FE22AE /* Background.cpp */,
-				17609DB7219BF07300F85383 /* App.h */,
-				17609DB6219BF07300F85383 /* App.cpp */,
 				1727D28B219145520048CB99 /* GlutApp.h */,
 				1727D28A219145520048CB99 /* GlutApp.cpp */,
 				17609DCD219CA02D00F85383 /* Timer.h */,
@@ -131,6 +166,10 @@
 				17609DC0219C098400F85383 /* Rect.cpp */,
 				17609DC4219C0DE800F85383 /* TexRect.h */,
 				17609DC3219C0DE800F85383 /* TexRect.cpp */,
+				84E81B372281310B00579F68 /* Projectile.h */,
+				84E81B38228132C200579F68 /* Projectile.cpp */,
+				84E81B3E2281419A00579F68 /* Enemy.cpp */,
+				84E81B40228141A800579F68 /* Enemy.h */,
 				173FEF021AA63A07006CCB85 /* Products */,
 				17609DBA219C077D00F85383 /* Frameworks */,
 			);
@@ -217,8 +256,11 @@
 				848B83F9226ECD5000FE22AE /* Platform.cpp in Sources */,
 				1727D28C219145520048CB99 /* GlutApp.cpp in Sources */,
 				17609DC2219C098400F85383 /* Rect.cpp in Sources */,
+				84E81B3F2281419A00579F68 /* Enemy.cpp in Sources */,
 				848B83F6226E873300FE22AE /* Background.cpp in Sources */,
+				84E81B39228132C200579F68 /* Projectile.cpp in Sources */,
 				17609DCE219CA02D00F85383 /* Timer.cpp in Sources */,
+				844E95FB2272987A00A810E8 /* myCoin.cpp in Sources */,
 				17609DC5219C0DE800F85383 /* TexRect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

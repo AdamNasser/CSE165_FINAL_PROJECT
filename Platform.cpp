@@ -8,7 +8,7 @@
 
 #include "Platform.h"
 using namespace std;
-Platform::Platform(float width, float x, float y):Rect(x,y,width,0.08,0,0,0) {
+Platform::Platform(float width, float x, float y):Rect(x,y,width,0.08,0.545,0.271,0.075) {
     this->setWidth(width);
 }
 
@@ -38,8 +38,8 @@ bool Platform::checkXContains() {
 
 
 void Platform::checkOccupied() {
-    if(this->mainCharacter->getY() > this->getY()+0.3 && checkXContains()) {
-            //cout<<"landing verified"<<endl;
+    if(this->mainCharacter->getY() >= this->getY()+0.3 && checkXContains()) {
+           // cout<<"landing verified"<<endl;
             this->mainCharacter->setY(this->getY() +0.5);
             this->mainCharacter->isOnPlatform = true;
     } else {
