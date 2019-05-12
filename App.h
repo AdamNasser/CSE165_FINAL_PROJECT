@@ -21,7 +21,13 @@ public:
     
     AnimatedRect* hat;
     TexRect coinIcon;
-    Rect coinbackgroundRect; 
+    TexRect heart1;
+    TexRect heart2;
+    TexRect heart3;
+
+    Rect coinbackgroundRect;
+    Rect heartbackground;
+    
     
     TexRect* background;
     TexRect* background2;

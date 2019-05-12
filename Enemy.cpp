@@ -16,6 +16,7 @@ Enemy::Enemy(float xPos,float yPos): TexRect("goomba.png",xPos,yPos,0.4,0.4 ){
 }
 
 void Enemy::handleMovement() {
+    if(isAvailable){
     switch (this->mycharacter->orientation) {
         case 1:
             if(this->mycharacter->characterisMoving){
@@ -24,6 +25,7 @@ void Enemy::handleMovement() {
             break;
         default:
             break;
+    }
     }
 }
 

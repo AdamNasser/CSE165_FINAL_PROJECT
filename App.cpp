@@ -10,8 +10,8 @@ float currentcoinY = 0.0;
 float currentEnemyX = -1.0;
 float currentEnemyY = -0.4; 
 
-float width = 2000;
-float height = 1000;
+float width = 1000;
+float height = 500;
 void renderText(string text, float x, float y, void* font = GLUT_BITMAP_TIMES_ROMAN_24, float r = 1, float g = 1, float b = 1){
     glColor3f(r, g, b);
     float offset = 0;
@@ -91,6 +91,14 @@ App::App(int argc, char** argv, int width, int height, const char* title): GlutA
     
      this->coinbackgroundRect = Rect(1.2,1,0.5,0.2,0,0,0);
      this->coinIcon = TexRect("coin.png", 1.3, 1.0, 0.15, 0.15);
+    this->heartbackground= Rect(0.5,1,0.7,0.2,0,0,0);
+    this->heart1 = TexRect("heart.png", 0.6, 1.0, 0.15, 0.15);
+    this->heart2 = TexRect("heart.png", 0.8, 1.0, 0.15, 0.15);
+    this->heart3 = TexRect("heart.png", 1.0, 1.0, 0.15, 0.15);
+
+    
+    
+    
     
     this->selectedKey = 0;
     
@@ -142,8 +150,26 @@ App::App(int argc, char** argv, int width, int height, const char* title): GlutA
 }
 void App::draw() {
     renderText(to_string(numberofCoins), 1.6, 0.89, GLUT_BITMAP_TIMES_ROMAN_24, 1, 1, 1);
-   this->coinIcon.draw(0);
+    this->coinIcon.draw(0);
     this->coinbackgroundRect.draw();
+    switch (mainCharacter->lives)
+    {
+        case 1: // code to be executed if n = 1;
+            this->heart1.draw(0);
+            break;
+        case 2: // code to be executed if n = 2;
+            this->heart1.draw(0);
+            this->heart2.draw(0);
+            break;
+        case 3:
+            this->heart1.draw(0);
+            this->heart2.draw(0);
+            this->heart3.draw(0);
+            break;
+    }
+    
+    this->heartbackground.draw();
+    
     
     platform->draw();
     platform2->draw();
@@ -167,6 +193,7 @@ void App::draw() {
     //handle projectiles
     for(int i = 0; i < singleton->myprojectiles.size(); i++) {
         singleton->myprojectiles.at(i).draw(0.20);
+        
     }
     
     
@@ -175,6 +202,18 @@ void App::draw() {
         myenemies.at(i).draw(0.3);
     }
     
+ /*   for(int j = 0; i < myenemies.size(); j++) {
+        if(myenemies.at(j).isAvailable){
+            myenemies.at(j).draw(0.3);
+        }
+        
+        if((singleton->myprojectiles.at(i).getX()==myenemies.at(j).getX() && singleton->myprojectiles.at(i).getY()==myenemies.at(j).getY())){
+            myenemies.at(j).isAvailable==false;
+        }
+        
+        
+    }
+ */
     
 }
 void App::specialKeyDown(int key, float x, float y){
@@ -190,7 +229,8 @@ void App::keyDown(unsigned char key, float x, float y){
         exit(0);
     }else if(key == ' ') {
         cout<<"shot a projectile"<<endl;
-        myprojectiles.push_back(Projectile(this->mainCharacter->getX(), this->mainCharacter->getY()));
+        myprojectiles.push_back(Projectile(this->mainCharacter->getX(), this->mainCharacter->getY(), this->mainCharacter->orientation));
+        mainCharacter->lives-=1;
         
     }
 }

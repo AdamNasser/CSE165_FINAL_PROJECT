@@ -17,6 +17,7 @@ Character::Character(int orientation, bool characterisMoving, const char * map_f
     this->isDescending = isDescending;
     this->isOnPlatform = false;
     this->ceiling = 0.45;
+    this->lives=3;
 }
 int Character::handleKeyInput(int key, int selectedKey, string type) {
    // cout<<key<<endl; 

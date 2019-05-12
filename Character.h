@@ -33,6 +33,8 @@ public:
     
     bool isOnPlatform;
     
+    int lives;
+    
 };
 
 #endif
