@@ -16,6 +16,7 @@ class Projectile: public TexRect {
 public:
     int handleMovement();
     bool isAvailable;
+    bool didExplode; 
     int direction;
     Projectile(float , float, int);
 }; 

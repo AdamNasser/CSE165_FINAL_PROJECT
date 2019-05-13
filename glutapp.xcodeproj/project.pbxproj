@@ -28,6 +28,8 @@
 		846116DA226A2AEB000BC8B0 /* mushroom.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 846116D9226A2AEA000BC8B0 /* mushroom.png */; };
 		848B83F6226E873300FE22AE /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848B83F5226E873300FE22AE /* Background.cpp */; };
 		848B83F9226ECD5000FE22AE /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848B83F8226ECD5000FE22AE /* Platform.cpp */; };
+		849A1D802289132400C3CE34 /* fireball.bmp in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 849A1D7F2289132400C3CE34 /* fireball.bmp */; };
+		849A1D8222891B5800C3CE34 /* output-onlinepngtools.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 849A1D8122891B5800C3CE34 /* output-onlinepngtools.png */; };
 		84D118902272AFD900CD9B14 /* mariohat.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 84D1188F2272AFD900CD9B14 /* mariohat.png */; };
 		84E81B39228132C200579F68 /* Projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84E81B38228132C200579F68 /* Projectile.cpp */; };
 		84E81B3B22813CE100579F68 /* projectile.png in Copy Files (3 items) */ = {isa = PBXBuildFile; fileRef = 84E81B3A22813CE100579F68 /* projectile.png */; };
@@ -54,6 +56,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				849A1D8222891B5800C3CE34 /* output-onlinepngtools.png in Copy Files (3 items) */,
+				849A1D802289132400C3CE34 /* fireball.bmp in Copy Files (3 items) */,
 				D73705B62287A839008D3DA0 /* heart.png in Copy Files (3 items) */,
 				84E81B442281497700579F68 /* goomba.png in Copy Files (3 items) */,
 				84E81B422281477000579F68 /* mariobackground.png in Copy Files (3 items) */,
@@ -105,6 +109,8 @@
 		848B83F5226E873300FE22AE /* Background.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
 		848B83F7226ECBB900FE22AE /* Platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
 		848B83F8226ECD5000FE22AE /* Platform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Platform.cpp; sourceTree = "<group>"; };
+		849A1D7F2289132400C3CE34 /* fireball.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = fireball.bmp; sourceTree = "<group>"; };
+		849A1D8122891B5800C3CE34 /* output-onlinepngtools.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "output-onlinepngtools.png"; sourceTree = "<group>"; };
 		84D1188F2272AFD900CD9B14 /* mariohat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariohat.png; sourceTree = "<group>"; };
 		84E81B372281310B00579F68 /* Projectile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Projectile.h; sourceTree = "<group>"; };
 		84E81B38228132C200579F68 /* Projectile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Projectile.cpp; sourceTree = "<group>"; };
@@ -135,6 +141,8 @@
 		173FEEF81AA63A07006CCB85 = {
 			isa = PBXGroup;
 			children = (
+				849A1D8122891B5800C3CE34 /* output-onlinepngtools.png */,
+				849A1D7F2289132400C3CE34 /* fireball.bmp */,
 				D73705B52287A838008D3DA0 /* heart.png */,
 				84E81B432281497700579F68 /* goomba.png */,
 				84E81B412281477000579F68 /* mariobackground.png */,

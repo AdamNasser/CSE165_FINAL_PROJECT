@@ -7,7 +7,7 @@
 App* singleton;
 float currentcoinX = 4.2;
 float currentcoinY = 0.0;
-float currentEnemyX = -1.0;
+float currentEnemyX = 1.5;
 float currentEnemyY = -0.4; 
 
 float width = 1000;
@@ -54,26 +54,38 @@ void timer(int id){
         }
     }
     
-    
-    //handle projectiles
-    for(int i = 0; i < singleton->myprojectiles.size(); i++) {
-        
-        if(singleton->myprojectiles.at(i).handleMovement() > 2.2) {
-            singleton->myprojectiles.erase(singleton->myprojectiles.begin());
+  
+    if(singleton->myprojectiles.size() != 0) {
+        //handle projectiles
+        for(int i = 0; i < singleton->myprojectiles.size(); i++) {
+            float projectileX = singleton->myprojectiles.at(i).handleMovement();
+            float projectileY = singleton->myprojectiles.at(i).getY();
+            
+            //projectile is off screen can erase it
+            if( projectileX > singleton->mainCharacter->getX() + 2.2) {
+                cout<<"erased a projectile"<<endl;
+                  singleton->myprojectiles.erase(singleton->myprojectiles.begin());
+            }
+            
+            
+            for(int i = 0; i < singleton->myenemies.size(); i++) {
+                singleton->myenemies.at(i).handleMovement(projectileX,projectileY);
+                singleton->redraw();
+            }
+            
+            
         }
-        
+    } else {
+         for(int i = 0; i < singleton->myenemies.size(); i++) {
+                  singleton->myenemies.at(i).handleMovement(100000,100000);
+             
+         }
     }
-    
-    //handle enemies
-    for(int i = 0; i < singleton->myenemies.size(); i++) {
-        singleton->myenemies.at(i).handleMovement(); 
-    }
-    
     
     singleton->redraw();
     
     
-    cout<<"character y: "<<singleton->mainCharacter->getY()<<endl;\
+    //cout<<"character y: "<<singleton->mainCharacter->getY()<<endl;\
      //cout<<"coin y: "<<singleton->coin1->getY()<<endl;
     //cout<<"platform y: "<<singleton->platform->getY()<<endl;
     
@@ -96,10 +108,6 @@ App::App(int argc, char** argv, int width, int height, const char* title): GlutA
     this->heart2 = TexRect("heart.png", 0.8, 1.0, 0.15, 0.15);
     this->heart3 = TexRect("heart.png", 1.0, 1.0, 0.15, 0.15);
 
-    
-    
-    
-    
     this->selectedKey = 0;
     
     this->numberofCoins = 0; 
@@ -137,15 +145,13 @@ App::App(int argc, char** argv, int width, int height, const char* title): GlutA
     }
     
     //enemy initalization
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 6; i++) {
         Enemy enemy = Enemy(currentEnemyX, currentEnemyY);
         currentEnemyX += 4.0;
         enemy.mycharacter = this->mainCharacter;
+        enemy.explosion = new AnimatedRect("output-onlinepngtools.png",6,6,100,true,true, enemy.getX(),enemy.getY()+0.2,0.5,0.5);
         myenemies.push_back(enemy);
-        
     }
-    
-    
     timer(1);
 }
 void App::draw() {
@@ -169,14 +175,10 @@ void App::draw() {
     }
     
     this->heartbackground.draw();
-    
-    
     platform->draw();
     platform2->draw();
-    
     levelbackground->t1->draw(0);
     levelbackground->t2->draw(0);
-    
     numberofCoins = 0;
     
     for(int i = 0; i < 20; i++) {
@@ -199,21 +201,15 @@ void App::draw() {
     
     //handle enemies
     for(int i = 0; i < myenemies.size(); i++) {
-        myenemies.at(i).draw(0.3);
-    }
-    
- /*   for(int j = 0; i < myenemies.size(); j++) {
-        if(myenemies.at(j).isAvailable){
-            myenemies.at(j).draw(0.3);
+        if(myenemies.at(i).isAvailable){
+             myenemies.at(i).draw(0.30);
+        } else if(myenemies.at(i).isAvailable == false) {
+            myenemies.at(i).explosion->draw(0.40);
+           
+            myenemies.at(i).didExplode = true;
         }
-        
-        if((singleton->myprojectiles.at(i).getX()==myenemies.at(j).getX() && singleton->myprojectiles.at(i).getY()==myenemies.at(j).getY())){
-            myenemies.at(j).isAvailable==false;
-        }
-        
-        
+       
     }
- */
     
 }
 void App::specialKeyDown(int key, float x, float y){

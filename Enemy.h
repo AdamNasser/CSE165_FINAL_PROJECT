@@ -14,9 +14,11 @@ class Enemy: public TexRect {
 public: 
     Enemy(float, float);
     bool isAvailable;
-    void handleMovement();
+    bool didExplode; 
+    bool handleMovement(float px , float py);
     int pace;
-    Character* mycharacter; 
+    Character* mycharacter;
+    AnimatedRect* explosion; 
    
 };
 
