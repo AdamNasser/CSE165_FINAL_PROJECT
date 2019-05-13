@@ -14,6 +14,7 @@ Enemy::Enemy(float xPos,float yPos): TexRect("goomba.png",xPos,yPos,0.4,0.4 ){
     cout<<"new enemy"<<endl;
     isAvailable = true;
     didExplode = false;
+    explosionTime = 0;
     pace = 0;
 }
 
@@ -54,6 +55,7 @@ bool Enemy::handleMovement(float px, float py) {
         }
         
     } else if(didExplode) {
+        explosionTime++; 
         switch (this->mycharacter->orientation) {
             case 1:
                 if(this->mycharacter->characterisMoving){

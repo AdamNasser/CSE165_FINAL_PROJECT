@@ -17,6 +17,7 @@ public:
     bool didExplode; 
     bool handleMovement(float px , float py);
     int pace;
+    int explosionTime; 
     Character* mycharacter;
     AnimatedRect* explosion; 
    

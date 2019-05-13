@@ -203,9 +203,8 @@ void App::draw() {
     for(int i = 0; i < myenemies.size(); i++) {
         if(myenemies.at(i).isAvailable){
              myenemies.at(i).draw(0.30);
-        } else if(myenemies.at(i).isAvailable == false) {
+        } else if(myenemies.at(i).isAvailable == false && myenemies.at(i).explosionTime < 8) {
             myenemies.at(i).explosion->draw(0.40);
-           
             myenemies.at(i).didExplode = true;
         }
        
